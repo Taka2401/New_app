@@ -16,12 +16,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ],
-    watchers: {
-      webpack: {
-        poll: true
-      }
-    }
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -38,6 +33,12 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
   ],
+
+  watchers: {
+    webpack: {
+      poll: true
+    }
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [

@@ -4,8 +4,8 @@
 
 <script>
 export default {
-  asyncData({ $axios, params }) {
-    return $axios.get(`http://localhost:3000/users/${params.id}`)
+  asyncData({ $axios }) {
+    return $axios.get(`http://localhost:3000/users`)
       .then((res) => {
         return { users: res.data }
       })
