@@ -5,7 +5,7 @@
 <script>
 export default {
   asyncData({ $axios }) {
-    return $axios.get(`http://localhost:3000/users`)
+    return $axios.get(`/api/users`)
       .then((res) => {
         return { users: res.data }
       })
