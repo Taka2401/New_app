@@ -5,7 +5,7 @@
 <script>
 export default {
   asyncData({ $axios }) {
-    return $axios.get(`/api/users`)
+    return $axios.get(`users`)
       .then((res) => {
         return { users: res.data }
       })

@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     post() {
-      this.$axios.post('/api/users', { name: this.name })
+      this.$axios.post('users', { name: this.name })
         .then((res) => {
           this.$router.push(`${res.data.id}`)
       })
