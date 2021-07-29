@@ -37,7 +37,8 @@ export default {
 
   watchers: {
     webpack: {
-      poll: true
+      poll: true,
+      ignored: /node_modules/
     }
   },
 
