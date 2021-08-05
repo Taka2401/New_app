@@ -14,6 +14,9 @@ ENV HOME=/${WORKDIR} \
 WORKDIR ${HOME}
 # ADD . ${WORKDIR}
 
+COPY package.json .
+COPY . .
+
 RUN apk update && \
     apk upgrade && \
     apk add --no-cache \
@@ -31,4 +34,9 @@ RUN apk update && \
     yarn install &&\
     rm -rf /var/cache/apk/*
 
+RUN yarn install
+RUN yarn run build
+
 EXPOSE ${CONTAINER_PORT}
+
+CMD ["yarn", "start"]
